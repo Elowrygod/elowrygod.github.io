@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор бронирования</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Калькулятор бронирования</h1>
+    
+    <div class="form-group">
+      <label for="dayType">Тип дня:</label>
+      <select id="dayType">
+        <option value="будни">Будни</option>
+        <option value="выходные">Выходные</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="startTime">Время начала (ЧЧ:ММ):</label>
+      <input type="text" id="startTime" placeholder="09:00">
+    </div>
+    
+    <div class="form-group">
+      <label for="endTime">Время окончания (ЧЧ:ММ):</label>
+      <input type="text" id="endTime" placeholder="18:00">
+    </div>
+    
+    <div class="form-group">
+      <label for="paymentType">Тип оплаты:</label>
+      <select id="paymentType">
+        <option value="разовое">Разовое посещение</option>
+        <option value="абонемент">Абонемент</option>
+      </select>
+    </div>
+    
+    <div class="form-group" id="daysGroup" style="display: none;">
+      <label for="days">Количество дней (для абонемента):</label>
+      <input type="number" id="days" min="1" value="1">
+    </div>
+    
+    <div class="form-group">
+      <label for="isGroup">Групповое бронирование (5+ человек):</label>
+      <select id="isGroup">
+        <option value="false">Нет</option>
+        <option value="true">Да</option>
+      </select>
+    </div>
+    
+    <button id="calculateBtn">Рассчитать стоимость</button>
+    
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
